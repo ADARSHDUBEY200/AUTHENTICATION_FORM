@@ -20,7 +20,7 @@ mongoose
 
 //MIDDLEWARE USING FOR THE CROSS ORIGIN REQUEST 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://authentication-frontend-ity1.onrender.com/login"],
+  origin: ["http://localhost:5173", "https://authentication-frontend-ity1.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
