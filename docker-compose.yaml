@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: "backend-container"
+    build:
+      context: "./BACKEND"
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - authenticate
+
+  frontend:
+    container_name: "frontend-container"
+    build:
+      context: "./FRONTEND"
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    networks:
+      - authenticate
+
+networks:
+  authenticate:
+    driver: bridge
