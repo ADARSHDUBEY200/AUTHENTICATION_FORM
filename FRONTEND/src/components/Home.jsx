@@ -21,7 +21,7 @@ const Home = () => {
 
       console.log("the cookie in first render is : "+token);
 
-      const { data } = await axios.post("http://localhost:3000/", {}, { withCredentials: true });
+      const { data } = await axios.post("https://authentication-backend-zf91.onrender.com", {}, { withCredentials: true });
 
 
       const { status, user } = data;

@@ -27,7 +27,7 @@ const Signup = () => {
 
     try {
 
-      const { data } = await axios.post("http://localhost:3000/signup", { ...formData }, { withCredentials: true });
+      const { data } = await axios.post("https://authentication-backend-zf91.onrender.com", { ...formData }, { withCredentials: true });
 
       const { success, message } = data;
       console.log("THIS IS THE DATA OF THE SIGNUP : " + data);
